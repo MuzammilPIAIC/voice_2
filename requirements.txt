@@ -67,6 +67,7 @@ Send2Trash
 six
 SpeechRecognition
 sqlparse
+libsndfile1
 stack-data
 tomli
 traitlets
