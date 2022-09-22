@@ -66,7 +66,7 @@ s3transfer
 Send2Trash
 six
 SpeechRecognition
-libsndfile1
+libsndfile
 stack-data
 tomli
 traitlets
