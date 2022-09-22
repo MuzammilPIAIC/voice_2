@@ -48,6 +48,7 @@ pickleshare
 Pillow
 prompt-toolkit
 psycopg2
+soundfile
 pure-eval==0.2.2
 pycparser==2.21
 pydub
