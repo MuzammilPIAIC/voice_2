@@ -77,4 +77,3 @@ webencodings
 whitenoise
 xlsx2csv
 soundfile
-libsndfile1-dev
