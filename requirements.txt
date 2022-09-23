@@ -77,3 +77,4 @@ webencodings
 whitenoise
 xlsx2csv
 requests
+soundfile
