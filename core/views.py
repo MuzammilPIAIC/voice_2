@@ -8,7 +8,7 @@ from django.conf import settings
 import os
 import json
 import requests
-
+import time
 
 
 header = {
@@ -108,7 +108,22 @@ def record_detail(request, id):
 
     response_json = response.json()
     id = response_json['id']
+	
+    time.sleep(4)
 
+    TRANSCRIPT_ENDPOINT = 'https://api.assemblyai.com/v2/transcript/'+str(id)
+
+    response = requests.get(
+    TRANSCRIPT_ENDPOINT,
+    headers={'authorization': api_key},
+    )
+
+    response_json_2 = response.json()
+    text = response_json['text']
+
+
+    time.sleep(2)
+	
     TRANSCRIPT_ENDPOINT = 'https://api.assemblyai.com/v2/transcript/'+str(id)
 
     response = requests.get(
