@@ -44,15 +44,15 @@ def record_detail(request, id):
 #     r = sr.Recognizer()
 
 #     # open the file
-    try:
-        with sr.AudioFile(filename) as source:
-            # listen for the data (load audio to memory)
-            audio_data = r.record(source)
-            # recognize (convert from speech to text)
-            text = r.recognize_google(audio_data)
-            print(text)
-    except:
-        text = "not Understand"
+#     try:
+    with sr.AudioFile(filename) as source:
+        # listen for the data (load audio to memory)
+        audio_data = r.record(source)
+        # recognize (convert from speech to text)
+        text = r.recognize_google(audio_data)
+        print(text)
+#     except:
+#         text = "not Understand"
 #     text = "not Understand"
 
     context = {
