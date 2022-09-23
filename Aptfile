@@ -1,2 +1,5 @@
-libsndfile1
-libsndfile1-dev
+libasound2-dev 
+python-dev 
+python-numpy 
+python-setuptools 
+libsndfile-dev
