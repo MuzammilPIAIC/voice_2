@@ -28,6 +28,7 @@ def record_detail(request, id):
     record = get_object_or_404(Record, id=id)
     
 #     filename = os.path.join(settings.MEDIA_ROOT, str('new.wav'))
+    filename = os.path.join(settings.MEDIA_ROOT, str(record.voice_record))
     
 #     out = os.path.join(settings.MEDIA_ROOT, str('out.wav'))
 #     data, samplerate = soundfile.read(filename)
@@ -43,16 +44,16 @@ def record_detail(request, id):
 #     r = sr.Recognizer()
 
 #     # open the file
-#     try:
-#         with sr.AudioFile(new_file) as source:
-#             # listen for the data (load audio to memory)
-#             audio_data = r.record(source)
-#             # recognize (convert from speech to text)
-#             text = r.recognize_google(audio_data)
-#             print(text)
-#     except:
-#         text = "not Understand"
-    text = "not Understand"
+    try:
+        with sr.AudioFile(filename) as source:
+            # listen for the data (load audio to memory)
+            audio_data = r.record(source)
+            # recognize (convert from speech to text)
+            text = r.recognize_google(audio_data)
+            print(text)
+    except:
+        text = "not Understand"
+#     text = "not Understand"
 
     context = {
         "page_title": "Recorded audio detail",
