@@ -76,5 +76,4 @@ wcwidth
 webencodings
 whitenoise
 xlsx2csv
-json
 requests
