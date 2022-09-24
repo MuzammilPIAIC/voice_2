@@ -1,9 +1,9 @@
 from django.contrib import messages
 from django.http.response import JsonResponse
 from django.shortcuts import get_object_or_404, render
-# import soundfile
+import soundfile
 from .models import Record
-# import speech_recognition as sr
+import speech_recognition as sr
 from django.conf import settings
 import os
 import json
